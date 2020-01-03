@@ -1,0 +1,238 @@
+
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  height: 100%;   
+  margin: 0px;  /*removes default style*/
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  color: #0d0d0d;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  color: #0d0d0d;
+  font-weight: normal;
+  margin: 0 10px;
+}
+
+h3 {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #606060;
+  font-weight: normal;
+}
+
+h4 {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #0d0d0d;
+  font-weight: bold;
+  margin: 0 0 4px;
+}
+
+h5 {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 13px;
+  color: #606060;
+  font-weight: normal;
+  margin: 0 0 4px;
+}
+
+hr { 
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: .5px solid #b3b3b3;
+} 
+
+a:link {
+  text-decoration: none;
+}
+
+.clear {
+  clear: both;
+}
+
+
+/*  HEADER  */
+
+.flexheader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 15px;
+  width: 100%;
+  border: 0px solid black; /*REMOVE WHEN DONE*/
+}
+
+.h-left, .h-right {
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+/*  SEARCH BOX  */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  width: 55%;
+  height:45px;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 0 2px 2px 0;
+  height: 29px;
+}
+
+button:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+input {
+  font-size: 14px;
+  border: 1px solid #b3b3b3;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-right-style: none;
+  padding-left: 10px;
+  height: 25px;
+  width: 100%;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+
+
+/*  MAIN CONTENT DIV  */
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 30px 20px 0 90px;
+  width: 100%;
+  height: auto;
+}
+
+
+
+/*  VIDEO CONTENT  */
+
+.content {
+  flex: 75%;
+  height: auto;
+  padding-right: 20px;
+  background-color: ;
+}
+
+.vidframe {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.vidframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*  SIDEBAR CONTENT  */
+
+.sidebar {
+  flex: 25%;
+  height: 100%;
+  margin-right: 100px;
+  background-color: ;
+}
+
+.suggested {
+  padding-bottom: 30px;
+}
+
+/*  IMAGE PROPERTIES  */
+
+img.mag {
+  padding: 2.5px 17px 0 17px;
+}
+
+img.nav, img.navsearch {
+  vertical-align: middle;
+  padding-right: 20px;
+}
+
+img.profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+img.chill {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+img.thumb {
+  float: left;
+  margin-right: 10px;
+}
+
+
+
+/*  RESPONSIVE CODE  */
+
+@media screen and (max-width: 590px) {
+  .searchbox {
+      display: none !important;
+  }
+}
+
+@media screen and (min-width: 590px) {
+  img.navsearch {
+      display: none !important;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+  .row { flex-direction: column;}
+}
+
